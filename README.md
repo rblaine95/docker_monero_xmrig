@@ -14,7 +14,7 @@ docker run -ti --rm \
   -e xmrpool=$pool \
   -e numthreads=$threads \
   -e startport=$port \
-  rblaine/monero_xmrig
+  rblaine/monero-xmrig
 ```
 
 ### Variable Defaults
