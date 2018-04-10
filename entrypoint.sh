@@ -5,7 +5,8 @@ sysctl vm.nr_hugepages=128
 if [ -z "$numthreads" ]
 then
       echo "\$numthreads is empty"
-      numthreads=$(nproc)
+      cache=$(cat /proc/cpuinfo | grep "cache size" | awk 'NR==1{print $4}')
+      numthreads=$(expr $cache / 4096)
 else
       echo "\$numthreads is NOT empty"
 fi

@@ -4,7 +4,7 @@ Because `servethehome/monero_xmrig` is using outdated Ubuntu and doesn't support
 ### Usage
 * `$username` - pool username
 * `$pool` - pool address (without `stratum+tcp://`)
-* `$threads` - to calculate best thread count use this: `cache=$(cat /proc/cpuinfo | grep "cache size" | awk 'NR==1{print $4}') && threads=$(expr $cache / 4096)`
+* `$threads` - optimal cryptonight v7 thread count is `L3 cache/4096`
 * `$donate` - percentage of hash to donate to devs (not me)
 * `$password` - optional for most pools
 
@@ -18,7 +18,7 @@ docker run -ti --rm \
 ```
 
 ### Variable Defaults
-* `$threads` - output of `$(nproc)`
+* `$threads` - output of `cache=$(cat /proc/cpuinfo | grep "cache size" | awk 'NR==1{print $4}') && numthreads=$(expr $cache / 4096)`
 * `$port` - `8100`
 * `$xmrpool` - `xmr-usa.dwarfpool.com`
 * `$password` - `x`
