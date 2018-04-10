@@ -44,7 +44,7 @@ then
       donate=5
       echo Using --- $donate
 else
-      echo "\$password is NOT empty"
+      echo "\$donate is NOT empty"
 fi
 
 #wget http://files.linux-bench.com/mine/xmrig.tar.gz
