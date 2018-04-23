@@ -1,7 +1,7 @@
 ### Monero XMRig Docker
 Because `servethehome/monero_xmrig` is using outdated Ubuntu and doesn't support Cryptonight V7
 
-XMRig Version: 2.6.0-beta3
+XMRig Version: `2.6.0-beta3`
 
 ### Usage
 * `$username` - pool username
