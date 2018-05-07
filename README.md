@@ -3,6 +3,9 @@ Because `servethehome/monero_xmrig` is using outdated Ubuntu and doesn't support
 
 XMRig Version: `2.6.2`
 
+If a new version for XMRig comes out and you want me to update this docker, feel free to open an issue or do a pull request.  
+I will try to update this docker as quickly as possible.
+
 ### Usage
 * `$username` - pool username
 * `$pool` - pool address (without `stratum+tcp://`)
@@ -26,7 +29,3 @@ docker run -ti --rm \
 * `$xmrpool` - `xmr-usa.dwarfpool.com`
 * `$password` - `x`
 * `$donate` - `5`
-
-### Issues
-If a new version for XMRig comes out and you want me to update this docker, feel free to open an issue or do a pull request.  
-I will try to update this docker as quickly as possible.
