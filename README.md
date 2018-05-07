@@ -16,6 +16,7 @@ docker run -ti --rm \
   -e xmrpool=$pool \
   -e numthreads=$threads \
   -e startport=$port \
+  -e donate=$donate \
   rblaine/monero_xmrig
 ```
 
@@ -25,3 +26,7 @@ docker run -ti --rm \
 * `$xmrpool` - `xmr-usa.dwarfpool.com`
 * `$password` - `x`
 * `$donate` - `5`
+
+### Issues
+If a new version for XMRig comes out and you want me to update this docker, feel free to open an issue or do a pull request.  
+I will try to update this docker as quickly as possible.
