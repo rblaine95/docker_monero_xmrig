@@ -1,6 +1,6 @@
 FROM ubuntu:xenial
 
-ENV VERSION 2.6.0-beta3
+ENV VERSION 2.6.2
 
 RUN apt-get update && \
     apt-get upgrade -y
