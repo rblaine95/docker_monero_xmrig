@@ -9,7 +9,7 @@ if [ -z "$numthreads" ]; then
 else
     echo "\$numthreads is NOT empty"
 fi
-echo Using --- $numthreads
+echo "     Using --- $numthreads"
 
 if [ -z "$startport" ] ;then
     echo "\$startport is empty"
@@ -17,7 +17,7 @@ if [ -z "$startport" ] ;then
 else
     echo "\$startport is NOT empty"
 fi
-echo Using --- $startport
+echo "     Using --- $startport"
 
 if [ -z "$xmrpool" ]; then
     echo "\$xmrpool is empty"
@@ -25,12 +25,12 @@ if [ -z "$xmrpool" ]; then
 else
     echo "\$xmrpool is NOT empty"
 fi
-echo Using --- $xmrpool
+echo "     Using --- $xmrpool"
 
 if [ -z "$password" ]; then
     echo "\$password is empty"
     password=x
-    echo Using --- $password
+    echo "     Using --- $password"
 else
     echo "\$password is NOT empty"
 fi
@@ -41,7 +41,16 @@ if [ -z "$donate" ]; then
 else
     echo "\$donate is NOT empty"
 fi
-echo Using --- $donate
+echo "     Using --- $donate"
+
+#Added Functionality 2018/05/14
+if [ -z "$OPTIONS" ]; then
+    echo "\$OPTIONS is empty"
+    echo "     Using --- Defaults"
+else
+    echo "\$OPTIONS is NOT empty"
+    echo "     Using --- $OPTIONS"
+fi
 
 git clone https://github.com/xmrig/xmrig.git
 cd xmrig
@@ -52,5 +61,5 @@ cd build
 cmake ..
 make -j$(nproc)
 #./xmrig -o stratum+tcp://$xmrpool:$startport -u $username -p $email -t $numthreads
-echo -o stratum+tcp://$xmrpool:$startport -u $username -p $password -t $numthreads --donate-level=$donate
-./xmrig -o stratum+tcp://$xmrpool:$startport -u $username -p $password -t $numthreads --donate-level=$donate
+echo -o stratum+tcp://$xmrpool:$startport -u $username -p $password -t $numthreads --donate-level=$donate $OPTIONS
+./xmrig -o stratum+tcp://$xmrpool:$startport -u $username -p $password -t $numthreads --donate-level=$donate $OPTIONS
