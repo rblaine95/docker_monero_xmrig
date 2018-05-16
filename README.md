@@ -1,3 +1,22 @@
+### Modifications:
+Added ability to use and OPTIONS to allow user to add additional options for XMRIG 
+### Options
+Some available options.
+```
+  -a, --algo=ALGO          cryptonight (default) or cryptonight-lite
+  -v, --av=N               algorithm variation, 0 auto select
+      --cpu-affinity       set process affinity to CPU core(s), mask 0x3 for cores 0 and 1
+      --cpu-priority       set process priority (0 idle, 2 normal to 5 highest)
+      --no-huge-pages      disable huge pages support
+      --variant            algorithm PoW variant
+      --user-agent         set custom user-agent string for pool
+  -B, --background         run the miner in the background
+      --max-cpu-usage=N    maximum CPU usage for automatic threads mode (default 75)
+      --safe               safe adjust threads and av settings for current CPU
+      --nicehash           enable nicehash/xmrig-proxy support
+```
+
+### Original Readme.
 ### Monero XMRig Docker
 Because `servethehome/monero_xmrig` is using outdated Ubuntu and doesn't support Cryptonight V7
 
