@@ -1,4 +1,12 @@
-### Modifications:
+### Monero XMRig Docker
+Because `servethehome/monero_xmrig` is using outdated Ubuntu and doesn't support Cryptonight V7
+
+XMRig Version: `2.6.2`
+
+If a new version for XMRig comes out and you want me to update this docker, feel free to open an issue or do a pull request.  
+I will try to update this docker as quickly as possible.
+
+### Extended XMRig Options
 Added ability to use and OPTIONS to allow user to add additional options for XMRIG 
 ### Options
 Some available options.
@@ -15,15 +23,6 @@ Some available options.
       --safe               safe adjust threads and av settings for current CPU
       --nicehash           enable nicehash/xmrig-proxy support
 ```
-
-### Original Readme.
-### Monero XMRig Docker
-Because `servethehome/monero_xmrig` is using outdated Ubuntu and doesn't support Cryptonight V7
-
-XMRig Version: `2.6.2`
-
-If a new version for XMRig comes out and you want me to update this docker, feel free to open an issue or do a pull request.  
-I will try to update this docker as quickly as possible.
 
 ### Usage
 * `$username` - pool username
