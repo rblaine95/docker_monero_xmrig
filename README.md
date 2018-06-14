@@ -1,4 +1,10 @@
 ### Monero XMRig Docker
+
+
+[![Docker Pulls](https://img.shields.io/docker/pulls/rblaine/monero_xmrig.svg)](https://hub.docker.com/r/rblaine/monero_xmrig/) [![Docker Stars](https://img.shields.io/docker/stars/rblaine/monero_xmrig.svg)](https://hub.docker.com/r/rblaine/monero_xmrig/) [![](https://images.microbadger.com/badges/image/rblaine/monero_xmrig.svg)](https://microbadger.com/images/rblaine/monero_xmrig "Get your own image badge on microbadger.com")
+[![Docker Automated build](https://img.shields.io/docker/automated/rblaine/monero_xmrig.svg)](https://hub.docker.com/r/rblaine/monero_xmrig/)
+[![Docker Build Status](https://img.shields.io/docker/build/rblaine/monero_xmrig.svg)](https://hub.docker.com/r/rblaine/monero_xmrig/)
+
 Because `servethehome/monero_xmrig` is using outdated Ubuntu and doesn't support Cryptonight V7
 
 XMRig Version: `2.6.2`
@@ -7,7 +13,7 @@ If a new version for XMRig comes out and you want me to update this docker, feel
 I will try to update this docker as quickly as possible.
 
 ### Extended XMRig Options
-Added ability to use and OPTIONS to allow user to add additional options for XMRIG 
+Added ability to use and OPTIONS to allow user to add additional options for XMRIG
 ### Options
 Some available options.
 ```
