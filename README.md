@@ -1,7 +1,6 @@
 ### Monero XMRig Docker
 
 [![Docker Repository on Quay](https://quay.io/repository/rblaine95/monero_xmrig/status "Docker Repository on Quay")](https://quay.io/repository/rblaine95/monero_xmrig)  [![Docker Build Status](https://img.shields.io/docker/build/rblaine/monero_xmrig.svg)](https://hub.docker.com/r/rblaine/monero_xmrig/)  
-[![Docker Pulls](https://img.shields.io/docker/pulls/rblaine/monero_xmrig.svg)](https://hub.docker.com/r/rblaine/monero_xmrig/) [![Docker Stars](https://img.shields.io/docker/stars/rblaine/monero_xmrig.svg)](https://hub.docker.com/r/rblaine/monero_xmrig/)  
 
 Because `servethehome/monero_xmrig` is using outdated Ubuntu and doesn't support Cryptonight V7
 
