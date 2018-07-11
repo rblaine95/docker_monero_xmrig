@@ -1,14 +1,10 @@
-FROM ubuntu:bionic
+FROM alpine:3.8
 
 ENV VERSION 2.6.2
 
-RUN apt-get update && \
-    apt-get upgrade -y
-
-RUN apt-get install git cmake make libuv1-dev libmicrohttpd-dev build-essential -y
-
-RUN apt-get autoclean && \
-    apt-get autoremove
+RUN apk update && \
+    apk add git make g++ cmake \
+        libuv-dev libmicrohttpd-dev --no-cache
 
 COPY entrypoint.sh /usr/local/bin/xmrig.sh
 

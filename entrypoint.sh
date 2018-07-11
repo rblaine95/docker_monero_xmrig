@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 sysctl vm.nr_hugepages=128
 
