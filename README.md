@@ -33,6 +33,7 @@ Some available options.
 * `$threads` - optimal cryptonight v7 thread count is `L3 cache/2048`
 * `$donate` - percentage of hash to donate to devs (not me)
 * `$password` - optional for most pools
+* `$VERSION` - XMRig version to use
 
 ```
 docker run -ti --rm \
@@ -41,6 +42,7 @@ docker run -ti --rm \
   -e numthreads=$threads \
   -e startport=$port \
   -e donate=$donate \
+  -e VERSION=$VERSION \
   rblaine/monero_xmrig
 ```
 
@@ -50,3 +52,4 @@ docker run -ti --rm \
 * `$xmrpool` - `xmr-usa.dwarfpool.com`
 * `$password` - `x`
 * `$donate` - `5`
+* `$VERSION` - Current XMRig version listed above
