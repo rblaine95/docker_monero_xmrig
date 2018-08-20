@@ -43,15 +43,6 @@ else
 fi
 echo "     Using --- $donate"
 
-#Added Functionality 2018/05/14
-if [ -z "$OPTIONS" ]; then
-    echo "\$OPTIONS is empty"
-    echo "     Using --- Defaults"
-else
-    echo "\$OPTIONS is NOT empty"
-    echo "     Using --- $OPTIONS"
-fi
-
 git clone https://github.com/xmrig/xmrig.git
 cd xmrig
 git checkout v$VERSION
