@@ -1,4 +1,4 @@
-FROM alpine:3.8
+FROM alpine
 
 ENV VERSION 2.6.4
 
