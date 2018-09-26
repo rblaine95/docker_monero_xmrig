@@ -27,7 +27,7 @@ docker run -ti --rm \
   -e VERSION=$VERSION \
   rblaine/monero_xmrig
 ```
-Deploy onto an OpenShift Cluster
+#### Deploy onto an OpenShift Cluster
 ```
 oc adm policy add-scc-to-user anyuid -z miner-sa
 oc new-app -f template.yaml \
