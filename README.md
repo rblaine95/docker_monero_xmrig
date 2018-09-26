@@ -25,7 +25,7 @@ docker run -ti --rm \
   -e startport=$port \
   -e donate=$donate \
   -e VERSION=$VERSION \
-  rblaine/monero_xmrig
+  quay.io/rblaine95/monero_xmrig
 ```
 #### Deploy onto an OpenShift Cluster
 ```
