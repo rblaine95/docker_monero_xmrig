@@ -1,10 +1,11 @@
 FROM alpine
 
-ENV VERSION 2.6.4
+ENV VERSION 2.8.1
 
 RUN apk update && \
     apk add git make g++ cmake \
-        libuv-dev libmicrohttpd-dev --no-cache
+        libuv-dev libmicrohttpd-dev openssl-dev --no-cache && \
+    rm -rf /var/cache/apk/
 
 COPY entrypoint.sh /usr/local/bin/xmrig.sh
 
