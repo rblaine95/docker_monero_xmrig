@@ -27,19 +27,6 @@ docker run -ti --rm \
   -e VERSION=$VERSION \
   rblaine/monero_xmrig
 ```
-#### Deploy onto an OpenShift Cluster
-```
-oc adm policy add-scc-to-user anyuid -z miner-sa
-oc new-app -f template.yaml \
-  -p USER=$username \
-  -p PASS=$password \
-  -p XMR_POOL=$pool \
-  -p THREADS=$threads \
-  -p DONATE=$donate \
-  -p PORT=$port \
-  -p VERSION=$version \
-  -p REPLICAS=$replicas
-```
 
 ### Variable Defaults
 * `$threads` - output of `L3 cache/2048`
