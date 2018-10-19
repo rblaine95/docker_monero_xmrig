@@ -1,6 +1,6 @@
 FROM alpine
 
-ENV VERSION 2.8.1
+ENV VERSION 2.8.3
 
 RUN apk update && \
     apk add git make g++ cmake \

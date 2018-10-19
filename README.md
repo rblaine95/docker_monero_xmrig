@@ -1,10 +1,12 @@
 ### Monero XMRig Docker
 
-[![Docker Repository on Quay](https://quay.io/repository/rblaine95/monero_xmrig/status "Docker Repository on Quay")](https://quay.io/repository/rblaine95/monero_xmrig)  [![Docker Build Status](https://img.shields.io/docker/build/rblaine/monero_xmrig.svg)](https://hub.docker.com/r/rblaine/monero_xmrig/)  
+[![Docker Repository on Quay](https://quay.io/repository/rblaine95/monero_xmrig/status "Docker Repository on Quay")](https://quay.io/repository/rblaine95/monero_xmrig) 
+[![GitHub release](https://img.shields.io/github/release/xmrig/xmrig/all.svg)](https://github.com/xmrig/xmrig/releases) 
+[![GitHub Release Date](https://img.shields.io/github/release-date-pre/xmrig/xmrig.svg)](https://github.com/xmrig/xmrig/releases)
 
 Because `servethehome/monero_xmrig` is using outdated Ubuntu and doesn't support Cryptonight V9
 
-XMRig Version: `2.8.1`
+XMRig Version: `2.8.3`
 
 If a new version for XMRig comes out and you want me to update this docker, feel free to open an issue or do a pull request.  
 I will try to update this docker as quickly as possible.
@@ -25,7 +27,7 @@ docker run -ti --rm \
   -e startport=$port \
   -e donate=$donate \
   -e VERSION=$VERSION \
-  rblaine/monero_xmrig
+  quay.io/rblaine95/monero_xmrig
 ```
 
 ### Variable Defaults
