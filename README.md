@@ -2,7 +2,7 @@
 
 [![Docker Repository on Quay](https://quay.io/repository/rblaine95/monero_xmrig/status "Docker Repository on Quay")](https://quay.io/repository/rblaine95/monero_xmrig)  [![Docker Build Status](https://img.shields.io/docker/build/rblaine/monero_xmrig.svg)](https://hub.docker.com/r/rblaine/monero_xmrig/)  
 
-Because `servethehome/monero_xmrig` is using outdated Ubuntu and doesn't support Cryptonight V7
+Because `servethehome/monero_xmrig` is using outdated Ubuntu and doesn't support Cryptonight V9
 
 XMRig Version: `2.8.1`
 
@@ -12,7 +12,7 @@ I will try to update this docker as quickly as possible.
 ### Usage
 * `$username` - pool username
 * `$pool` - pool address (without `stratum+tcp://`)
-* `$threads` - optimal cryptonight v7 thread count is `L3 cache/2048`
+* `$threads` - optimal cryptonight v9 thread count is `L3 cache/2048`
 * `$donate` - percentage of hash to donate to devs (not me)
 * `$password` - optional for most pools
 * `$VERSION` - XMRig version to use
