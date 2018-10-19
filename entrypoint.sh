@@ -56,18 +56,9 @@ fi
 
 if [ -z "$algo" ]; then echo "     Using --- $coin"; else echo "     Using --- $algo"; fi
 
-git clone https://github.com/xmrig/xmrig.git
-cd xmrig
-git checkout v$VERSION
-sed -i -e 's/constexpr const int kMinimumDonateLevel = 1;/constexpr const int kMinimumDonateLevel = 0;/g' src/donate.h
-mkdir build
-cd build
-cmake ..
-make -j$(nproc)
-
 if [ -z "$algo" ]; then
   echo -o $xmrpool:$startport -u $username -p $password -t $numthreads --coin=$coin --donate-level=$donate $OPTIONS
-  ./xmrig -o $xmrpool:$startport \
+  xmrig -o $xmrpool:$startport \
     -u $username \
     -p $password \
     -t $numthreads \
@@ -76,7 +67,7 @@ if [ -z "$algo" ]; then
     $OPTIONS
 else
   echo -o $xmrpool:$startport -u $username -p $password -t $numthreads --algo=$algo --donate-level=$donate $OPTIONS
-  ./xmrig -o $xmrpool:$startport \
+  xmrig -o $xmrpool:$startport \
     -u $username \
     -p $password \
     -t $numthreads \
