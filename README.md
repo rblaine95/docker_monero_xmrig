@@ -6,7 +6,7 @@
 
 Because `servethehome/monero_xmrig` is using outdated Ubuntu and doesn't support Cryptonight V9
 
-XMRig Version: `2.8.3`
+XMRig Version: `2.9.4`
 
 If a new version for XMRig comes out and you want me to update this docker, feel free to open an issue or do a pull request.  
 I will try to update this docker as quickly as possible.
