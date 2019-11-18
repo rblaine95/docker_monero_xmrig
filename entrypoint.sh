@@ -43,6 +43,14 @@ else
 fi
 echo "     Using --- $donate"
 
+if [ -z "$coin" ]; then
+    echo "\$coin is empty"
+    coin=monero
+else
+    echo "\$coin is NOT empty"
+fi
+echo "     Using --- $coin"
+
 git clone https://github.com/xmrig/xmrig.git
 cd xmrig
 git checkout v$VERSION
@@ -53,4 +61,10 @@ cmake ..
 make -j$(nproc)
 #./xmrig -o stratum+tcp://$xmrpool:$startport -u $username -p $email -t $numthreads
 echo -o stratum+tcp://$xmrpool:$startport -u $username -p $password -t $numthreads --donate-level=$donate $OPTIONS
-./xmrig -o stratum+tcp://$xmrpool:$startport -u $username -p $password -t $numthreads --donate-level=$donate $OPTIONS
+./xmrig -o stratum+tcp://$xmrpool:$startport \
+  -u $username \
+  -p $password \
+  -t $numthreads \
+  --coin=$coin \
+  --donate-level=$donate \
+  $OPTIONS
