@@ -4,7 +4,7 @@
 [![GitHub release](https://img.shields.io/github/release/xmrig/xmrig/all.svg)](https://github.com/xmrig/xmrig/releases) 
 [![GitHub Release Date](https://img.shields.io/github/release-date-pre/xmrig/xmrig.svg)](https://github.com/xmrig/xmrig/releases)
 
-Because `servethehome/monero_xmrig` is using outdated Ubuntu and doesn't support Cryptonight V9
+Because `servethehome/monero_xmrig` is very outdated.
 
 XMRig Version: `5.3.0`
 
