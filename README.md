@@ -6,7 +6,7 @@
 
 Because `servethehome/monero_xmrig` is very outdated.
 
-XMRig Version: `5.5.3`
+XMRig Version: `5.7.0`
 
 If a new version for XMRig comes out and you want me to update this docker, feel free to open an issue or do a pull request.  
 I will try to update this docker as quickly as possible.
