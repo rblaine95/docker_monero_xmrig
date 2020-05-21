@@ -13,7 +13,7 @@ echo "     Using --- $numthreads"
 
 if [ -z "$startport" ] ;then
     echo "\$startport is empty"
-    startport=8100
+    startport=3333
 else
     echo "\$startport is NOT empty"
 fi
@@ -21,7 +21,7 @@ echo "     Using --- $startport"
 
 if [ -z "$xmrpool" ]; then
     echo "\$xmrpool is empty"
-    xmrpool=xmr-usa.dwarfpool.com
+    xmrpool=pool.supportxmr.com
 else
     echo "\$xmrpool is NOT empty"
 fi
@@ -29,7 +29,7 @@ echo "     Using --- $xmrpool"
 
 if [ -z "$password" ]; then
     echo "\$password is empty"
-    password=x
+    password=docker
     echo "     Using --- $password"
 else
     echo "\$password is NOT empty"

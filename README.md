@@ -34,9 +34,9 @@ docker run -ti --rm \
 
 ### Variable Defaults
 * `$threads` - output of `L3 cache/2048`
-* `$port` - `8100`
-* `$xmrpool` - `xmr-usa.dwarfpool.com`
-* `$password` - `x`
+* `$port` - `3333`
+* `$xmrpool` - `pool.supportxmr.com`
+* `$password` - `docker`
 * `$donate` - `5`
 * `$coin` - `monero`
 * `$VERSION` - Current XMRig version listed above
