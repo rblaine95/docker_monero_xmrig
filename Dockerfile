@@ -1,6 +1,6 @@
 FROM alpine
 
-ENV VERSION 5.11.2
+ENV VERSION 5.11.3
 
 RUN echo "@testing http://nl.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories && \
     echo "@edge http://nl.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories && \
