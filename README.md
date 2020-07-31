@@ -14,7 +14,7 @@ I will try to update this docker as quickly as possible.
 ### Usage
 * `$username` - pool username
 * `$pool` - pool address (without `stratum+tcp://`)
-* `$threads` - optimal cryptonight v9 thread count is `L3 cache/2048`
+* `$threads` - Number of threads to mine with (recommended is `vCPU / 2`)
 * `$donate` - percentage of hash to donate to devs (not me)
 * `$password` - optional for most pools
 * `$coin` - which coin to mine
@@ -33,7 +33,7 @@ docker run -ti --rm \
 ```
 
 ### Variable Defaults
-* `$threads` - output of `L3 cache/2048`
+* `$threads` - output of `nproc / 2`
 * `$port` - `3333`
 * `$xmrpool` - `pool.supportxmr.com`
 * `$password` - `docker`
