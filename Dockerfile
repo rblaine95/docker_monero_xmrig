@@ -1,4 +1,4 @@
-FROM alpine
+FROM quay.io/rblaine95/alpine:v3.12
 
 ENV VERSION 6.7.0
 
