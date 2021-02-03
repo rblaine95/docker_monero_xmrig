@@ -1,6 +1,6 @@
 FROM ghcr.io/rblaine95/alpine:3.13
 
-ENV VERSION 6.8.0
+ENV VERSION 6.8.1
 
 RUN echo "@testing http://nl.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories && \
     echo "@edge http://nl.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories && \
