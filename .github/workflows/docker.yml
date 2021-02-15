@@ -1,0 +1,44 @@
+name: dockerbuild
+
+on:
+  workflow_dispatch:
+  push:
+
+env:
+  IMAGE_NAME: monero_xmrig
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Login to Github
+        uses: docker/login-action@v1
+        with:
+          registry: ghcr.io
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.GHCR_PAT }}
+      - name: Build Image
+        run: |
+          docker build \
+            --tag $IMAGE_NAME \
+            --label org.opencontainers.image.source=https://github.com/${{ github.repository }} \
+            .
+      - name: Tag and Push
+        run: |
+          GH_IMAGE=ghcr.io/${{ github.repository_owner }}/$IMAGE_NAME
+
+          # Strip git ref prefix from version
+          VERSION=$(echo "${{ github.ref }}" | sed -e 's,.*/\(.*\),\1,')
+
+          # Strip "v" prefix from tag name
+          [[ "${{ github.ref }}" == "refs/tags/"* ]] && VERSION=$(echo $VERSION | sed -e 's/^v//')
+
+          # Use Docker `latest` tag convention
+          [ "$VERSION" == "master" ] && VERSION=latest
+
+          echo Github=$GH_IMAGE
+          echo VERSION=$VERSION
+
+          docker tag $IMAGE_NAME $GH_IMAGE:$VERSION
+          docker push $GH_IMAGE:$VERSION
