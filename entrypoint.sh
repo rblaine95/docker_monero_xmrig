@@ -20,7 +20,7 @@ echo "     Using --- $startport"
 
 if [ -z "$xmrpool" ]; then
     echo "\$xmrpool is empty"
-    xmrpool=pool.supportxmr.com
+    xmrpool=stratum+tcp://pool.supportxmr.com
 else
     echo "\$xmrpool is NOT empty"
 fi
@@ -58,9 +58,9 @@ mkdir build
 cd build
 cmake ..
 make -j$(nproc)
-#./xmrig -o stratum+tcp://$xmrpool:$startport -u $username -p $email -t $numthreads
-echo -o stratum+tcp://$xmrpool:$startport -u $username -p $password -t $numthreads --donate-level=$donate $OPTIONS
-./xmrig -o stratum+tcp://$xmrpool:$startport \
+#./xmrig -o $xmrpool:$startport -u $username -p $email -t $numthreads
+echo -o $xmrpool:$startport -u $username -p $password -t $numthreads --donate-level=$donate $OPTIONS
+./xmrig -o $xmrpool:$startport \
   -u $username \
   -p $password \
   -t $numthreads \

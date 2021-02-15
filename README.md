@@ -13,7 +13,7 @@ I will try to update this docker as quickly as possible.
 
 ### Usage
 * `$username` - pool username
-* `$pool` - pool address (without `stratum+tcp://`)
+* `$pool` - pool address (with protocol, like `stratum+tcp://`)
 * `$threads` - Number of threads to mine with (recommended is `vCPU / 2`)
 * `$donate` - percentage of hash to donate to devs (not me)
 * `$password` - optional for most pools
@@ -35,7 +35,7 @@ docker run -ti --rm \
 ### Variable Defaults
 * `$threads` - output of `nproc / 2`
 * `$port` - `3333`
-* `$xmrpool` - `pool.supportxmr.com`
+* `$xmrpool` - `stratum+tcp://pool.supportxmr.com`
 * `$password` - `docker`
 * `$donate` - `5`
 * `$coin` - `monero`
