@@ -1,6 +1,6 @@
 ### Monero XMRig Docker
 
-[![Docker Repository on Quay](https://quay.io/repository/rblaine95/monero_xmrig/status "Docker Repository on Quay")](https://quay.io/repository/rblaine95/monero_xmrig) 
+[![GitHub Workflow Status (branch)][github-actions-badge]][github-actions-link] 
 [![GitHub release](https://img.shields.io/github/release/xmrig/xmrig/all.svg)](https://github.com/xmrig/xmrig/releases) 
 [![GitHub Release Date](https://img.shields.io/github/release-date-pre/xmrig/xmrig.svg)](https://github.com/xmrig/xmrig/releases)
 
@@ -29,7 +29,7 @@ docker run -ti --rm \
   -e donate=$donate \
   -e coin=$coin \
   -e VERSION=$VERSION \
-  quay.io/rblaine95/monero_xmrig
+  ghcr.io/rblaine95/monero_xmrig
 ```
 
 ### Variable Defaults
@@ -40,3 +40,6 @@ docker run -ti --rm \
 * `$donate` - `5`
 * `$coin` - `monero`
 * `$VERSION` - Current XMRig version listed above
+
+[github-actions-badge]: https://img.shields.io/github/workflow/status/rblaine95/docker_monero_xmrig/dockerbuild/master "Github Workflow Status (master)"
+[github-actions-link]: https://github.com/rblaine95/docker_monero_xmrig/actions?query=workflow%3Adockerbuild
