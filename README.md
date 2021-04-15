@@ -18,8 +18,10 @@ I will try to update this docker as quickly as possible.
 * `$donate` - percentage of hash to donate to devs (not me)
 * `$password` - optional for most pools
 * `$coin` - which coin to mine
+* `$algo` - which algorithm to mine
 * `$VERSION` - XMRig version to use
 
+#### Mine specific coin
 ```
 docker run -ti --rm \
   -e username=$username \
@@ -31,6 +33,18 @@ docker run -ti --rm \
   -e VERSION=$VERSION \
   ghcr.io/rblaine95/monero_xmrig
 ```
+#### Mine specific algorithm
+```
+docker run -ti --rm \
+  -e username=$username \
+  -e xmrpool=$pool \
+  -e numthreads=$threads \
+  -e startport=$port \
+  -e donate=$donate \
+  -e algo=$algo \
+  -e VERSION=$VERSION \
+  ghcr.io/rblaine95/monero_xmrig
+```
 
 ### Variable Defaults
 * `$threads` - output of `nproc / 2`
@@ -39,6 +53,7 @@ docker run -ti --rm \
 * `$password` - `docker`
 * `$donate` - `5`
 * `$coin` - `monero`
+* `$algo` - `null`
 * `$VERSION` - Current XMRig version listed above
 
 [github-actions-badge]: https://img.shields.io/github/workflow/status/rblaine95/docker_monero_xmrig/dockerbuild/master "Github Workflow Status (master)"

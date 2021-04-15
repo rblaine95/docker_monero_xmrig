@@ -42,13 +42,19 @@ else
 fi
 echo "     Using --- $donate"
 
-if [ -z "$coin" ]; then
-    echo "\$coin is empty"
-    coin=monero
+if [ -z "$algo" ]; then
+  echo "\$algo is empty"
+  if [ -z "$coin" ]; then
+      echo "\$coin is empty"
+      coin=monero
+  else
+      echo "\$coin is NOT empty"
+  fi
 else
-    echo "\$coin is NOT empty"
+  echo "\$algo is NOT empty"
 fi
-echo "     Using --- $coin"
+
+if [ -z "$algo" ]; then echo "     Using --- $coin"; else echo "     Using --- $algo"; fi
 
 git clone https://github.com/xmrig/xmrig.git
 cd xmrig
@@ -58,12 +64,23 @@ mkdir build
 cd build
 cmake ..
 make -j$(nproc)
-#./xmrig -o $xmrpool:$startport -u $username -p $email -t $numthreads
-echo -o $xmrpool:$startport -u $username -p $password -t $numthreads --donate-level=$donate $OPTIONS
-./xmrig -o $xmrpool:$startport \
-  -u $username \
-  -p $password \
-  -t $numthreads \
-  --coin=$coin \
-  --donate-level=$donate \
-  $OPTIONS
+
+if [ -z "$algo" ]; then
+  echo -o $xmrpool:$startport -u $username -p $password -t $numthreads --coin=$coin --donate-level=$donate $OPTIONS
+  ./xmrig -o $xmrpool:$startport \
+    -u $username \
+    -p $password \
+    -t $numthreads \
+    --coin=$coin \
+    --donate-level=$donate \
+    $OPTIONS
+else
+  echo -o $xmrpool:$startport -u $username -p $password -t $numthreads --algo=$algo --donate-level=$donate $OPTIONS
+  ./xmrig -o $xmrpool:$startport \
+    -u $username \
+    -p $password \
+    -t $numthreads \
+    --algo=$algo \
+    --donate-level=$donate \
+    $OPTIONS
+fi
