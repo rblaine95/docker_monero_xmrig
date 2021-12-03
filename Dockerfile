@@ -1,6 +1,6 @@
 FROM ghcr.io/rblaine95/alpine:edge
 
-ENV VERSION 6.16.0
+ENV VERSION 6.16.2
 
 RUN apk --no-cache --update upgrade && \
     apk --no-cache --update add git make g++ cmake coreutils build-base \
