@@ -56,5 +56,5 @@ docker run -ti --rm \
 * `$algo` - `null`
 * `$VERSION` - Current XMRig version listed above
 
-[github-actions-badge]: https://img.shields.io/github/workflow/status/rblaine95/docker_monero_xmrig/dockerbuild/master "Github Workflow Status (master)"
+[github-actions-badge]: https://img.shields.io/github/actions/workflow/status/rblaine95/docker_monero_xmrig/docker.yml?branch=master "Github Workflow Status (master)"
 [github-actions-link]: https://github.com/rblaine95/docker_monero_xmrig/actions?query=workflow%3Adockerbuild
