@@ -1,14 +1,15 @@
 ### Monero XMRig Docker
 
-[![GitHub Workflow Status (branch)][github-actions-badge]][github-actions-link] 
-[![GitHub release](https://img.shields.io/github/release/xmrig/xmrig/all.svg)](https://github.com/xmrig/xmrig/releases) 
+[![GitHub Workflow Status (branch)][github-actions-badge]][github-actions-link]
+[![GitHub release](https://img.shields.io/github/release/xmrig/xmrig/all.svg)](https://github.com/xmrig/xmrig/releases)
 [![GitHub Release Date](https://img.shields.io/github/release-date-pre/xmrig/xmrig.svg)](https://github.com/xmrig/xmrig/releases)
 
 Because `servethehome/monero_xmrig` is very outdated.
 
-XMRig Version: `6.20.0`
+XMRig Version: `6.21.0`
 
-If a new version for XMRig comes out and you want me to update this docker, feel free to open an issue or do a pull request.  
+If a new version for XMRig comes out and you want me to update this docker, feel free to open an issue or do a pull request.
+
 I will try to update this docker as quickly as possible.
 
 ### Usage
