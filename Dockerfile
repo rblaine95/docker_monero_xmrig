@@ -1,6 +1,6 @@
 FROM docker.io/alpine:3
 
-ENV VERSION 6.21.0
+ENV VERSION 6.21.1
 
 RUN apk --no-cache --update upgrade && \
     apk --no-cache --update add git make g++ cmake coreutils build-base \
