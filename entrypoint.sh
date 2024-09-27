@@ -56,9 +56,8 @@ fi
 
 if [ -z "$algo" ]; then echo "     Using --- $coin"; else echo "     Using --- $algo"; fi
 
-git clone https://github.com/xmrig/xmrig.git --depth 1
+git clone https://github.com/xmrig/xmrig.git --depth 1 -b v$VERSION
 cd xmrig
-git checkout v$VERSION
 sed -i -e 's/constexpr const int kMinimumDonateLevel = 1;/constexpr const int kMinimumDonateLevel = 0;/g' src/donate.h
 mkdir build
 cd build
